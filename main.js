@@ -21,7 +21,7 @@ function changeURL() {
       if (response.chartRedirectState) {
         var links = document.querySelectorAll('a[href^="/stocks"]');
         for (var i = 0; i < links.length; i++) {
-          const baseUrl = "https://chartink.com/stocks/";
+          const baseUrl = "https://chartink.com/stocks-new/";
           links[i].href =
             "https://in.tradingview.com/chart/?symbol=NSE:" +
             links[i].href.substring(baseUrl.length).replace(".html", "");

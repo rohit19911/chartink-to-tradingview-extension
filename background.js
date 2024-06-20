@@ -10,10 +10,10 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
       if (result.chartRedirect) {
         // only trigger if the url begins with https://chartink.com/stocks/
 
-        if (changeInfo.url.includes("https://chartink.com/stocks/")) {
-          // stockSymbol is the part after https://chartink.com/stocks/ and before .html
+        if (changeInfo.url.includes("https://chartink.com/stocks-new/")) {
+          // stockSymbol is the part after https://chartink.com/stocks-new/ and before .html
           const stockSymbol = changeInfo.url
-            .replace("https://chartink.com/stocks/", "")
+            .replace("https://chartink.com/stocks-new/", "")
             .replace(".html", "");
 
           browser.tabs.update(tabId, {
